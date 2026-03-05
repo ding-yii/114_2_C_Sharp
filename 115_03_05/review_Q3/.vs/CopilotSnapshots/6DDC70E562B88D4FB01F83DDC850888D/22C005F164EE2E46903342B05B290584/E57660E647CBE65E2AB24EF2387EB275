@@ -1,0 +1,165 @@
+﻿namespace review_Q3
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        // UI controls
+        private System.Windows.Forms.GroupBox groupBoxNumbers;
+        private System.Windows.Forms.TextBox txtNum1;
+        private System.Windows.Forms.TextBox txtNum2;
+        private System.Windows.Forms.TextBox txtNum3;
+        private System.Windows.Forms.TextBox txtNum4;
+        private System.Windows.Forms.TextBox txtNum5;
+
+        private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnExit;
+
+        private System.Windows.Forms.ListBox listBoxLottery;
+        private System.Windows.Forms.GroupBox groupBoxResult;
+        private System.Windows.Forms.Label labelResultTitle;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "樂透號碼產生器";
+
+            // Set default font to 18pt for readability
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+
+            // Group box for numbers
+            this.groupBoxNumbers = new System.Windows.Forms.GroupBox();
+            this.groupBoxNumbers.Text = "樂透號碼產生器";
+            this.groupBoxNumbers.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxNumbers.Size = new System.Drawing.Size(760, 120);
+
+            // Number text boxes (display only)
+            this.txtNum1 = new System.Windows.Forms.TextBox();
+            this.txtNum2 = new System.Windows.Forms.TextBox();
+            this.txtNum3 = new System.Windows.Forms.TextBox();
+            this.txtNum4 = new System.Windows.Forms.TextBox();
+            this.txtNum5 = new System.Windows.Forms.TextBox();
+
+            System.Drawing.Size numSize = new System.Drawing.Size(110, 60);
+            int topOffset = 30;
+            int leftStart = 20;
+            int gap = 20;
+
+            // Configure each number box
+            this.txtNum1.Location = new System.Drawing.Point(leftStart, topOffset);
+            this.txtNum1.Size = numSize;
+            this.txtNum1.ReadOnly = true;
+            this.txtNum1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
+            this.txtNum2.Location = new System.Drawing.Point(leftStart + (numSize.Width + gap) * 1, topOffset);
+            this.txtNum2.Size = numSize;
+            this.txtNum2.ReadOnly = true;
+            this.txtNum2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
+            this.txtNum3.Location = new System.Drawing.Point(leftStart + (numSize.Width + gap) * 2, topOffset);
+            this.txtNum3.Size = numSize;
+            this.txtNum3.ReadOnly = true;
+            this.txtNum3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
+            this.txtNum4.Location = new System.Drawing.Point(leftStart + (numSize.Width + gap) * 3, topOffset);
+            this.txtNum4.Size = numSize;
+            this.txtNum4.ReadOnly = true;
+            this.txtNum4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
+            this.txtNum5.Location = new System.Drawing.Point(leftStart + (numSize.Width + gap) * 4, topOffset);
+            this.txtNum5.Size = numSize;
+            this.txtNum5.ReadOnly = true;
+            this.txtNum5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+
+            // Add number boxes to group
+            this.groupBoxNumbers.Controls.Add(this.txtNum1);
+            this.groupBoxNumbers.Controls.Add(this.txtNum2);
+            this.groupBoxNumbers.Controls.Add(this.txtNum3);
+            this.groupBoxNumbers.Controls.Add(this.txtNum4);
+            this.groupBoxNumbers.Controls.Add(this.txtNum5);
+
+            // Buttons area
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+
+            this.btnGenerate.Text = "產生號碼";
+            this.btnOpen.Text = "開獎號碼";
+            this.btnExit.Text = "離開";
+
+            // Position buttons under the number group
+            int btnTop = this.groupBoxNumbers.Bottom + 20;
+            int btnLeft = 40;
+            int btnWidth = 160;
+            int btnHeight = 60;
+            int btnGap = 40;
+
+            this.btnGenerate.Location = new System.Drawing.Point(btnLeft, btnTop);
+            this.btnGenerate.Size = new System.Drawing.Size(btnWidth, btnHeight);
+
+            this.btnOpen.Location = new System.Drawing.Point(btnLeft + (btnWidth + btnGap) * 1, btnTop);
+            this.btnOpen.Size = new System.Drawing.Size(btnWidth, btnHeight);
+
+            this.btnExit.Location = new System.Drawing.Point(btnLeft + (btnWidth + btnGap) * 2, btnTop);
+            this.btnExit.Size = new System.Drawing.Size(btnWidth, btnHeight);
+
+            // ListBox for generated numbers / history
+            this.listBoxLottery = new System.Windows.Forms.ListBox();
+            this.listBoxLottery.Location = new System.Drawing.Point(12, btnTop + btnHeight + 20);
+            this.listBoxLottery.Size = new System.Drawing.Size(360, 210);
+
+            // Result group box
+            this.groupBoxResult = new System.Windows.Forms.GroupBox();
+            this.groupBoxResult.Text = "中獎比對結果";
+            this.groupBoxResult.Location = new System.Drawing.Point(390, btnTop + btnHeight + 20);
+            this.groupBoxResult.Size = new System.Drawing.Size(382, 210);
+
+            // Optional result title label inside result area
+            this.labelResultTitle = new System.Windows.Forms.Label();
+            this.labelResultTitle.Text = "";
+            this.labelResultTitle.Location = new System.Drawing.Point(10, 30);
+            this.labelResultTitle.Size = new System.Drawing.Size(360, 40);
+
+            this.groupBoxResult.Controls.Add(this.labelResultTitle);
+
+            // Add controls to form
+            this.Controls.Add(this.groupBoxNumbers);
+            this.Controls.Add(this.btnGenerate);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.listBoxLottery);
+            this.Controls.Add(this.groupBoxResult);
+
+            // Basic form layout adjustments
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MinimumSize = new System.Drawing.Size(820, 520);
+        }
+
+        #endregion
+    }
+}
